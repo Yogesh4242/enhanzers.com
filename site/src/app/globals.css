@@ -24,3 +24,25 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Add anton font utility */
+.font-anton {
+  font-family: var(--font-anton);
+}
+
+/* Style for split text characters */
+.duplicate-char {
+  position: absolute;
+  inset: 0;
+  transform: translateY(100%);
+}
+
+/* Hide animated words initially to avoid FOUC */
+[data-text-anim] {
+  visibility: hidden;
+}
+
+/* Menu hover effects */
+.menu-overlay__main:has(li:hover) li:not(:hover) {
+  opacity: 0.5;
+}
